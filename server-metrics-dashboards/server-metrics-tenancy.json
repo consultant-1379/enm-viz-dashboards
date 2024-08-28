@@ -1,0 +1,443 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 19,
+  "iteration": 1601562460407,
+  "links": [],
+  "panels": [
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 0,
+        "y": 0
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "max"
+          ],
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "semi-dark-yellow",
+                  "value": 97
+                },
+                {
+                  "color": "semi-dark-red",
+                  "value": 98
+                }
+              ]
+            },
+            "unit": "percent"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto"
+      },
+      "pluginVersion": "6.6.2",
+      "targets": [
+        {
+          "expr": "max(mem_used_percent{hostname=~\".+\",job=~\"$consul\"})",
+          "interval": "",
+          "legendFormat": "Memory Used",
+          "refId": "E"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Max Memory Consumption in at least one of the VM",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 6,
+        "w": 19,
+        "x": 5,
+        "y": 0
+      },
+      "id": 8,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "max"
+          ],
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 85
+                }
+              ]
+            },
+            "unit": "percent"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto"
+      },
+      "pluginVersion": "6.6.2",
+      "targets": [
+        {
+          "expr": "max(cpu_usage_user{hostname=~\".+\",job=~\"$consul\"})",
+          "interval": "",
+          "legendFormat": "User",
+          "refId": "C"
+        },
+        {
+          "expr": "max(cpu_usage_sys{hostname=~\".+\",job=~\"$consul\"})",
+          "interval": "",
+          "legendFormat": "System",
+          "refId": "D"
+        },
+        {
+          "expr": "max(cpu_usage_wait{hostname=~\".+\",job=~\"$consul\"})",
+          "interval": "",
+          "legendFormat": "IO Wait",
+          "refId": "B"
+        },
+        {
+          "expr": "max(cpu_usage_steal{hostname=~\".+\",job=~\"$consul\"})",
+          "interval": "",
+          "legendFormat": "Steal",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Max CPU Consumption in at least one of the VM",
+      "type": "stat"
+    },
+    {
+      "columns": [],
+      "datasource": null,
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 21,
+        "w": 24,
+        "x": 0,
+        "y": 6
+      },
+      "id": 11,
+      "options": {},
+      "pageSize": 1000,
+      "pluginVersion": "6.7.1",
+      "showHeader": true,
+      "sort": {
+        "col": 2,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "align": "auto",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "VM",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Click to see individual VM metrics",
+          "linkUrl": "/d/nxaK84qZk/cpu-memory?orgId=1&refresh=1m&var-consul=$consul&var-hostname=${__cell_1}",
+          "mappingType": 1,
+          "pattern": "hostname",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Memory",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #F",
+          "thresholds": [
+            "97",
+            "99"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "User CPU",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #G",
+          "thresholds": [
+            "80",
+            "90"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "Sys CPU",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #H",
+          "thresholds": [
+            "80",
+            "90"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "Wait CPU",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #I",
+          "thresholds": [
+            "80",
+            "90"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "Steal CPU",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #J",
+          "thresholds": [
+            "80",
+            "90"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "",
+          "align": "right",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 2,
+          "pattern": "/.*/",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "expr": "max by (hostname)  (mem_used_percent{job=~\"$consul\"})>98",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "Memory Used",
+          "refId": "F"
+        },
+        {
+          "expr": "max by (hostname)  (cpu_usage_user{job=~\"$consul\"})>85",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "Memory Used",
+          "refId": "G"
+        },
+        {
+          "expr": "max by (hostname)  (cpu_usage_sys{job=~\"$consul\"})>85",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "Memory Used",
+          "refId": "H"
+        },
+        {
+          "expr": "max by (hostname)  (cpu_usage_wait{job=~\"$consul\"})>85",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "Memory Used",
+          "refId": "I"
+        },
+        {
+          "expr": "max by (hostname)  (cpu_usage_steal{job=~\"$consul\"})>85",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "Memory Used",
+          "refId": "J"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Max Consumptions | CPU > 85 | Memory >98",
+      "transform": "table",
+      "type": "table"
+    },
+    {
+      "content": "<h1>\n<p>\n\n\n</p>\n<center><a href=\"/d/lWQhHSxWz/vm-failure-history?orgId=1&var-consul=$consul\" target=\"_blank\">View History Events</a></center>\n\n<center><a href=\"/d/xtkCtBkiz/enm-gui-availability?orgId=1&refresh=10s\" target=\"_blank\">View ENM GUI Availability</a></center>\n\n<center><a href=\"/d/nxaK84qZk/cpu-memory?orgId=1&refresh=1m&var-consul=$consul\" target=\"_blank\">View Server Metrics History</a></center>\n<center><a href=\"/d/PX1MxgKMz/vnflcm-workflows?orgId=1&refresh=1m&from=now-6h&to=now&var-consul=$consul\" target=\"_blank\">VNFLCM Workflows History</a></center>\n<center><a href=\"/d/H08oIMWMk/application-metrics-history?var-consul=$consul&var-amos=All\" target=\"_blank\">View Application History Events</a></center>\n<center><a href=\"/d/BWO-uYGMz/all-application-dependencies?orgId=1\" target=\"_blank\">View All Application Dependencies</a></center>\n\n\n\n</h1>\n\n\n",
+      "datasource": null,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 27
+      },
+      "id": 14,
+      "mode": "html",
+      "options": {},
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 22,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "CHARTER_CBRS_ATL",
+          "value": "CHARTER_CBRS_ATL"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(up{job=~\".*_ATL|.*_FRA\"},job)",
+        "hide": 0,
+        "includeAll": false,
+        "index": -1,
+        "label": "Tenancy",
+        "multi": false,
+        "name": "consul",
+        "options": [],
+        "query": "label_values(up{job=~\".*_ATL|.*_FRA\"},job)",
+        "refresh": 2,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "Server Metrics / Tenancy",
+  "uid": "9lvQWSqWk",
+  "version": 21
+}

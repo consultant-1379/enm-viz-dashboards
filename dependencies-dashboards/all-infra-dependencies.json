@@ -1,0 +1,1132 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": 28,
+    "iteration": 1595576590839,
+    "links": [],
+    "panels": [
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 0,
+          "y": 0
+        },
+        "id": 56,
+        "options": {},
+        "pageSize": null,
+        "repeat": "dependency",
+        "repeatDirection": "h",
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "elasticsearch",
+            "value": "elasticsearch"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 6,
+          "y": 0
+        },
+        "id": 57,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "esmon",
+            "value": "esmon"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 12,
+          "y": 0
+        },
+        "id": 58,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "haproxy",
+            "value": "haproxy"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 18,
+          "y": 0
+        },
+        "id": 59,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "jms",
+            "value": "jms"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 0,
+          "y": 8
+        },
+        "id": 60,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "neo4j",
+            "value": "neo4j"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 6,
+          "y": 8
+        },
+        "id": 61,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "nfsbatch",
+            "value": "nfsbatch"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 12,
+          "y": 8
+        },
+        "id": 62,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "nfscommon",
+            "value": "nfscommon"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 18,
+          "y": 8
+        },
+        "id": 63,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "nfsconfigmgt",
+            "value": "nfsconfigmgt"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 0,
+          "y": 16
+        },
+        "id": 64,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "nfsmdt",
+            "value": "nfsmdt"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 6,
+          "y": 16
+        },
+        "id": 65,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "nfsnrbk",
+            "value": "nfsnrbk"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 12,
+          "y": 16
+        },
+        "id": 66,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "nfspm",
+            "value": "nfspm"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 18,
+          "y": 16
+        },
+        "id": 67,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "nfspmlink",
+            "value": "nfspmlink"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 0,
+          "y": 24
+        },
+        "id": 68,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "nfssmrs",
+            "value": "nfssmrs"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 6,
+          "y": 24
+        },
+        "id": 69,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "openidm",
+            "value": "openidm"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 12,
+          "y": 24
+        },
+        "id": 70,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "postgres",
+            "value": "postgres"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 18,
+          "y": 24
+        },
+        "id": 71,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "solr",
+            "value": "solr"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 0,
+          "y": 32
+        },
+        "id": 72,
+        "options": {},
+        "pageSize": null,
+        "repeat": null,
+        "repeatDirection": "h",
+        "repeatIteration": 1595576590839,
+        "repeatPanelId": 56,
+        "scopedVars": {
+          "dependency": {
+            "selected": false,
+            "text": "visinamingnb",
+            "value": "visinamingnb"
+          }
+        },
+        "showHeader": true,
+        "sort": {
+          "col": 0,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "VM's",
+            "align": "center",
+            "colorMode": "row",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Metric",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "service_dependency{parent_node=~\"$dependency\", child_node=~\".+\"}",
+            "interval": "",
+            "legendFormat": "{{child_node}}",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$dependency",
+        "transform": "timeseries_aggregations",
+        "type": "table"
+      }
+    ],
+    "schemaVersion": 22,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "allValue": null,
+          "current": {
+            "text": "All",
+            "value": [
+              "$__all"
+            ]
+          },
+          "datasource": "Prometheus",
+          "definition": "label_values(service_dependency{job=~\".*\"},parent_node)",
+          "hide": 0,
+          "includeAll": true,
+          "index": -1,
+          "label": "Dependency",
+          "multi": true,
+          "name": "dependency",
+          "options": [],
+          "query": "label_values(service_dependency{job=~\".*\"},parent_node)",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 1,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        }
+      ]
+    },
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ]
+    },
+    "timezone": "",
+    "title": "All Infra dependencies",
+    "uid": "0q9KF5nGz",
+    "version": 1
+  }

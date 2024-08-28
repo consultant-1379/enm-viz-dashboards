@@ -1,0 +1,3354 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 10,
+  "iteration": 1601562147649,
+  "links": [],
+  "panels": [
+    {
+      "cacheTimeout": null,
+      "datasource": null,
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 23,
+      "links": [],
+      "options": {
+        "fieldOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "defaults": {
+            "mappings": [
+              {
+                "id": 0,
+                "op": "=",
+                "text": "N/A",
+                "type": 1,
+                "value": "null"
+              }
+            ],
+            "min": 0,
+            "nullValueMode": "connected",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "semi-dark-red",
+                  "value": null
+                },
+                {
+                  "color": "yellow",
+                  "value": 3
+                },
+                {
+                  "color": "dark-green",
+                  "value": 8
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "orientation": "horizontal",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.6.2",
+      "targets": [
+        {
+          "expr": "count(count by (job) (up{job=~\".*_ATL\"}==1))",
+          "instant": true,
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total Tenancies ATL",
+      "transparent": true,
+      "type": "gauge"
+    },
+    {
+      "columns": [],
+      "datasource": null,
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 9,
+        "w": 9,
+        "x": 8,
+        "y": 0
+      },
+      "id": 58,
+      "options": {},
+      "pageSize": null,
+      "showHeader": true,
+      "sort": {
+        "col": 0,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "align": "auto",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "__name__",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "instance",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#3274D9",
+            "#3274D9",
+            "#3274D9"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "link": false,
+          "mappingType": 1,
+          "pattern": "Value",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "active",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Aborted",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "aborted",
+          "thresholds": [
+            ""
+          ],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": []
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "incidentActive",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Business Key",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "businessKey",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Definition ID",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "id",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Incident",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "incidentActive",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Tenancy",
+          "align": "center",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "LCM Workflows Dashboard",
+          "linkUrl": "/d/PX1MxgKMz/vnflcm-workflows?orgId=1&from=now-5m&to=now&refresh=1m&var-consul=${__cell_8}",
+          "mappingType": 1,
+          "pattern": "job",
+          "sanitize": true,
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "right",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 2,
+          "pattern": "/.*/",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "expr": "ha_wfs_active{job=~\"$consul\"} or snapshot_wfs_active{job=~\"$consul\"} or upgrade_wfs_active{job=~\"$consul\"} or backup_wfs_active{job=~\"$consul\"}",
+          "format": "table",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Active Workflows",
+      "transform": "table",
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": null,
+      "gridPos": {
+        "h": 9,
+        "w": 7,
+        "x": 17,
+        "y": 0
+      },
+      "id": 25,
+      "links": [],
+      "options": {
+        "fieldOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "defaults": {
+            "mappings": [
+              {
+                "id": 0,
+                "op": "=",
+                "text": "N/A",
+                "type": 1,
+                "value": "null"
+              }
+            ],
+            "max": 4,
+            "min": 0,
+            "nullValueMode": "connected",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "semi-dark-red",
+                  "value": null
+                },
+                {
+                  "color": "dark-green",
+                  "value": 1
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": [],
+          "values": false
+        },
+        "orientation": "horizontal",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.6.2",
+      "targets": [
+        {
+          "expr": "count(count by (job) (up{job=~\".*_FRA\"}==1))",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total Tenancies FRA",
+      "transparent": true,
+      "type": "gauge"
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 9
+      },
+      "id": 4,
+      "panels": [],
+      "title": "VM Failures",
+      "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 0,
+        "y": 10
+      },
+      "id": 2,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": "consul",
+      "repeatDirection": "h",
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "BMAS-02_FRA",
+          "value": "BMAS-02_FRA"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 6,
+        "y": 10
+      },
+      "id": 61,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "BMASENM01_ATL",
+          "value": "BMASENM01_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 12,
+        "y": 10
+      },
+      "id": 62,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "CELLCOM_ATL",
+          "value": "CELLCOM_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 18,
+        "y": 10
+      },
+      "id": 63,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "CHARTER_CBRS_ATL",
+          "value": "CHARTER_CBRS_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 0,
+        "y": 16
+      },
+      "id": 64,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "CVENM01_ATL",
+          "value": "CVENM01_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 6,
+        "y": 16
+      },
+      "id": 65,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "CWW_ENM_ATL",
+          "value": "CWW_ENM_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 12,
+        "y": 16
+      },
+      "id": 66,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "EKN_ATL",
+          "value": "EKN_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 18,
+        "y": 16
+      },
+      "id": 67,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "ENM01XAAS_FRA",
+          "value": "ENM01XAAS_FRA"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 0,
+        "y": 22
+      },
+      "id": 68,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "FTC_ATL",
+          "value": "FTC_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 6,
+        "y": 22
+      },
+      "id": 69,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "HAUPPENM01_ATL",
+          "value": "HAUPPENM01_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 12,
+        "y": 22
+      },
+      "id": 70,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "KSW_ATL",
+          "value": "KSW_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 18,
+        "y": 22
+      },
+      "id": 71,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "NTWLS_ATL",
+          "value": "NTWLS_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 0,
+        "y": 28
+      },
+      "id": 72,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "TBAYTEL_ATL",
+          "value": "TBAYTEL_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 6,
+        "y": 28
+      },
+      "id": 73,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "TRAILENM01_ATL",
+          "value": "TRAILENM01_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 12,
+        "y": 28
+      },
+      "id": 74,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "VERIZON_LAB_ATL",
+          "value": "VERIZON_LAB_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "#37872D",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 18,
+        "y": 28
+      },
+      "id": 75,
+      "interval": null,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Tenancy Monitoring Console",
+          "url": "/d/0YCpzJqWz/overall-monitoring?orgId=1&var-consul=$consul"
+        }
+      ],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "failure(s)",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1601562147649,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "consul": {
+          "selected": false,
+          "text": "VIAERO_ATL",
+          "value": "VIAERO_ATL"
+        }
+      },
+      "sparkline": {
+        "fillColor": "#FF780A",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": 0
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "count(consul_health_node_status{check=~\"serfHealth|conhar\",node=~\".+\",status=~\"critical|warning|maintenance\",job=\"$consul\"}>=1 OR (consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc\"} > 1 <4) OR count by (hostname)(cpu_usage_user{job=~\"$consul+.*\"}>85  or pu_usage_sys{job=~\"$consul+.*\"}>85 or cpu_usage_wait{job=~\"$consul+.*\"}>85 or cpu_usage_steal{job=~\"$consul+.*\"}>85 or mem_used_percent{job=~\"$consul+.*\"}>98) OR (sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8) OR (avg(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >780) OR (max(pmserv_rop_collection_time{job=\"$consul\",job!=\"TRAILENM01_ATL\"}) >890) OR (cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50) OR (probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0) OR (probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0))",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$consul",
+      "transparent": true,
+      "type": "singlestat",
+      "valueFontSize": "200%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "columns": [],
+      "datasource": null,
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 19,
+        "w": 8,
+        "x": 0,
+        "y": 34
+      },
+      "id": 21,
+      "links": [],
+      "options": {},
+      "pageSize": 200,
+      "repeatDirection": "h",
+      "showHeader": true,
+      "sort": {
+        "col": 7,
+        "desc": false
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "align": "auto",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "__name__",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Failure",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "check",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "Health",
+              "value": "conhar"
+            },
+            {
+              "text": "VM",
+              "value": "serfHealth"
+            }
+          ]
+        },
+        {
+          "alias": "Tenancy",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Details",
+          "linkUrl": "/d/9lvQWSqWk/overall-cpu-memory?orgId=1&refresh=1m&var-consul=${__cell_2}",
+          "mappingType": 1,
+          "pattern": "job",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Serf",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "#E02F44",
+            "#E02F44"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #A",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "instance",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Status",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "#1F60C4",
+            "#FA6400",
+            "#C4162A"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "status",
+          "thresholds": [
+            "0",
+            "1",
+            "2"
+          ],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": []
+        },
+        {
+          "alias": "Node",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Details",
+          "linkUrl": "/d/0IWf0YJWk/consul-monitoring-dev-copy?orgId=1&var-consul=${__cell_4}",
+          "mappingType": 1,
+          "pattern": "node",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Health",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#FA6400",
+            "rgba(237, 129, 40, 0.89)",
+            "#FA6400"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #F",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Memory",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#56A64B",
+            "#FF780A",
+            "#E02F44"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #E",
+          "thresholds": [
+            "97",
+            "99"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "User CPU",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "#E02F44"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #G",
+          "thresholds": [
+            "80",
+            "90"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "Left / Leaving",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#1F60C4",
+            "#1F60C4",
+            "#1F60C4"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #J",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "Left",
+              "value": "3"
+            },
+            {
+              "text": "Leaving",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "alias": "Node",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": false,
+          "linkTooltip": "Details",
+          "linkUrl": "/d/0IWf0YJWk/consul-monitoring-dev-copy?orgId=1&var-consul=${__cell_4}",
+          "mappingType": 1,
+          "pattern": "member",
+          "sanitize": false,
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Sys CPU",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #I",
+          "thresholds": [
+            "80",
+            "90"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "Wait CPU",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #K",
+          "thresholds": [
+            "80",
+            "90"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "Steal CPU",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #L",
+          "thresholds": [
+            "80",
+            "90"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "Host",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Details",
+          "linkUrl": "/d/nxaK84qZk/cpu-memory?orgId=1&refresh=1m&var-consul=${__cell_2}&var-hostname=${__cell_1}",
+          "mappingType": 1,
+          "pattern": "hostname",
+          "sanitize": false,
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "expr": "max by (hostname,job) (mem_used_percent{job=~\"$consul\"}) >98",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "E"
+        },
+        {
+          "expr": "max by (hostname,job)  (cpu_usage_user{job=~\"$consul\"})>85",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "G"
+        },
+        {
+          "expr": "max by (hostname,job)  (cpu_usage_sys{job=~\"$consul\"})>85",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "I"
+        },
+        {
+          "expr": "max by (hostname,job)  (cpu_usage_wait{job=~\"$consul\"})>85",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "K"
+        },
+        {
+          "expr": "max by (hostname,job)  (cpu_usage_steal{job=~\"$consul\"})>85",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "L"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Server Failure List for selected Timerange",
+      "transform": "table",
+      "type": "table"
+    },
+    {
+      "cacheTimeout": null,
+      "columns": [],
+      "datasource": null,
+      "fontSize": "90%",
+      "gridPos": {
+        "h": 19,
+        "w": 8,
+        "x": 8,
+        "y": 34
+      },
+      "id": 41,
+      "links": [],
+      "options": {},
+      "pageSize": 200,
+      "pluginVersion": "6.6.2",
+      "repeat": null,
+      "repeatDirection": "h",
+      "showHeader": true,
+      "sort": {
+        "col": 3,
+        "desc": false
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "align": "auto",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "__name__",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Failure",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "check",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "Health",
+              "value": "conhar"
+            },
+            {
+              "text": "VM",
+              "value": "serfHealth"
+            }
+          ]
+        },
+        {
+          "alias": "Tenancy",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Details",
+          "linkUrl": "/d/0IWf0YJWk/consul-monitoring-dev-copy?orgId=1&var-consul=${__cell_4}",
+          "mappingType": 1,
+          "pattern": "job",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "#E02F44",
+            "#E02F44"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #A",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "instance",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Status",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "#1F60C4",
+            "#FA6400",
+            "#C4162A"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "status",
+          "thresholds": [
+            "0",
+            "1",
+            "2"
+          ],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": []
+        },
+        {
+          "alias": "Node",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Details",
+          "linkUrl": "/d/0IWf0YJWk/consul-monitoring-dev-copy?orgId=1&var-consul=${__cell_4}",
+          "mappingType": 1,
+          "pattern": "node",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#FA6400",
+            "rgba(237, 129, 40, 0.89)",
+            "#FA6400"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #F",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "#E02F44",
+            "#E02F44"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #E",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#FA6400",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #G",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Left / Leaving",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#1F60C4",
+            "#1F60C4",
+            "#1F60C4"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #J",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "Left",
+              "value": "3"
+            },
+            {
+              "text": "Leaving",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "alias": "Node",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Details",
+          "linkUrl": "/d/0IWf0YJWk/consul-monitoring-dev-copy?orgId=1&var-consul=${__cell_4}",
+          "mappingType": 1,
+          "pattern": "member",
+          "sanitize": false,
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "expr": "consul_health_node_status{check=\"serfHealth\",node=~\".+\",status=\"critical\",job=~\"$consul\"}>=1",
+          "format": "table",
+          "hide": false,
+          "instant": false,
+          "intervalFactor": 4,
+          "refId": "A"
+        },
+        {
+          "expr": "consul_health_node_status{check=\"serfHealth\",node=~\".+\",status=\"warning\",job=~\"$consul\"}>=1",
+          "format": "table",
+          "hide": false,
+          "instant": false,
+          "intervalFactor": 4,
+          "refId": "B"
+        },
+        {
+          "expr": "consul_health_node_status{check=\"serfHealth\",node=~\".+\",status=\"maintenance\",job=~\"$consul\"}>=1",
+          "format": "table",
+          "hide": false,
+          "instant": false,
+          "intervalFactor": 4,
+          "refId": "C"
+        },
+        {
+          "expr": "consul_health_node_status{check=\"conhar\",node=~\".+\",status=\"critical\",job=~\"$consul\"}>=1",
+          "format": "table",
+          "hide": false,
+          "instant": false,
+          "intervalFactor": 4,
+          "refId": "D"
+        },
+        {
+          "expr": "consul_health_node_status{check=\"conhar\",node=~\".+\",status=\"warning\",job=~\"$consul\"}>=1",
+          "format": "table",
+          "hide": false,
+          "instant": false,
+          "intervalFactor": 4,
+          "refId": "F"
+        },
+        {
+          "expr": "consul_health_node_status{check=\"conhar\",node=~\".+\",status=\"maintenance\",job=~\"$consul\"}>=1",
+          "format": "table",
+          "hide": false,
+          "instant": false,
+          "intervalFactor": 4,
+          "refId": "H"
+        },
+        {
+          "expr": "consul_serf_lan_member_status{job=\"$consul\",member!~\".*neo4j-cc|.*temp-repo-0|.*msosssnmpfm-0|.*msosssnmpfm-1\"} > 1 <4",
+          "format": "table",
+          "hide": false,
+          "instant": false,
+          "intervalFactor": 4,
+          "refId": "J"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Consul Failure List for selected Timerange",
+      "transform": "table",
+      "type": "table"
+    },
+    {
+      "cacheTimeout": null,
+      "columns": [],
+      "datasource": null,
+      "fontSize": "90%",
+      "gridPos": {
+        "h": 19,
+        "w": 8,
+        "x": 16,
+        "y": 34
+      },
+      "id": 60,
+      "links": [],
+      "options": {},
+      "pageSize": 200,
+      "pluginVersion": "6.6.2",
+      "repeatDirection": "h",
+      "showHeader": true,
+      "sort": {
+        "col": 5,
+        "desc": false
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "align": "auto",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "__name__",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Job Tenancy",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Application Metrics History",
+          "linkUrl": "/d/H08oIMWMk/application-metrics-history?orgId=1&var-consul=${__cell_5}",
+          "mappingType": 1,
+          "pattern": "job",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Login Status",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "#E02F44",
+            "#E02F44"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #B",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Availability Status",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "#E02F44",
+            "#E02F44"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #A",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "URL",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "instance",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Tenancy",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "ENM GUI Availability",
+          "linkUrl": "/d/xtkCtBkiz/enm-gui-availability?orgId=1&refresh=1m&var-tenancy=${__cell_5}",
+          "mappingType": 1,
+          "pattern": "tenancy",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "exported_job",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "CM Sync Percent",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#C4162A",
+            "#C4162A",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #F",
+          "thresholds": [
+            "0",
+            "80"
+          ],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
+          "alias": "PM File Collected",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#37872D",
+            "#37872D",
+            "#C4162A"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #C",
+          "thresholds": [
+            "0",
+            "0.8"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Avg PM ROP Time",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "#C4162A",
+            "#C4162A"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #D",
+          "thresholds": [
+            "0",
+            "780"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Max PM ROP Time",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "#C4162A",
+            "#C4162A"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #E",
+          "thresholds": [
+            "0",
+            "890"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Domain Coordinator Service Status",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#E02F44",
+            "#E02F44",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #G",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "SAS connectivity dpmediation",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "#56A64B",
+            "#56A64B",
+            "#E02F44"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #H",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "SAS connectivity domainproxy",
+          "align": "auto",
+          "colorMode": "row",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "#56A64B",
+            "#E02F44"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #I",
+          "thresholds": [
+            "0",
+            "1"
+          ],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Hostname",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "Application Metrics Dashboard",
+          "linkUrl": "/d/H08oIMWMk/application-metrics-history?orgId=1&var-consul=$consul",
+          "mappingType": 1,
+          "pattern": "hostname",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "ENM GUI Availability",
+          "linkUrl": "/d/xtkCtBkiz/prometheus-blackbox-exporter?orgId=1&refresh=10s&var-interval=10s&var-tenancy=${__cell_5}",
+          "mappingType": 1,
+          "pattern": "name",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "expr": "probe_success{job=\"blackbox_haproxy_availability\",tenancy=~\"$consul\"} == 0",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "A"
+        },
+        {
+          "expr": "probe_success{job=\"blackbox_haproxy_login\",tenancy=~\"$consul\"} == 0",
+          "format": "table",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "B"
+        },
+        {
+          "expr": "sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) / (sum without (hostname)(pmserv_files_collected{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})+sum without (hostname)(pmserv_files_failed{job=~\"$consul\",job!=\"TRAILENM01_ATL\"})) >0.8",
+          "format": "table",
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "C"
+        },
+        {
+          "expr": "avg(pmserv_rop_collection_time{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) >780",
+          "format": "table",
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "D"
+        },
+        {
+          "expr": "max(pmserv_rop_collection_time{job=~\"$consul\",job!=\"TRAILENM01_ATL\"}) >890",
+          "format": "table",
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "E"
+        },
+        {
+          "expr": "cm_status{exported_job=\"pushgateway\",job=\"pushgateway\",tenancy=~\"$consul\",type=\"sync_percent\",tenancy!~\"TRAILENM01_ATL|BMASENM01_ATL\"} <50",
+          "format": "table",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 4,
+          "legendFormat": "",
+          "refId": "F"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Application Failure List for selected Timerange",
+      "transform": "table",
+      "type": "table"
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 22,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "text": "All",
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(up{job=~\".*_ATL|.*_FRA\"},job)",
+        "hide": 0,
+        "includeAll": true,
+        "index": -1,
+        "label": "Tenancy",
+        "multi": true,
+        "name": "consul",
+        "options": [],
+        "query": "label_values(up{job=~\".*_ATL|.*_FRA\"},job)",
+        "refresh": 2,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "hidden": false,
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "Overall VM Failures NMaaS",
+  "uid": "XxPqiU_Wz",
+  "version": 47
+}
